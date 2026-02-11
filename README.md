@@ -20,6 +20,16 @@ Tip: use headphones on the Receiver to avoid loud echo/feedback.
 
 ## How to run (step by step)
 
+### Clean UI (recommended)
+
+You can run a simple interactive window with Start/Stop buttons:
+
+```bash
+python -m ui
+```
+
+Use the **Receiver** tab first, then the **Sender** tab.
+
 ### Step 1 — Download and open the project
 
 Open this folder in VS Code or File Explorer.
@@ -46,9 +56,9 @@ Leave this window open.
 
 On the Receiver PC:
 
-1) Open **Command Prompt**
-2) Type `ipconfig` and press Enter
-3) Look for **IPv4 Address** (it looks like `192.168.x.x`)
+1. Open **Command Prompt**
+2. Type `ipconfig` and press Enter
+3. Look for **IPv4 Address** (it looks like `192.168.x.x`)
 
 That number is the Receiver IP.
 
