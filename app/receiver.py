@@ -28,12 +28,30 @@ class ReceiverServer:
     channels: int = CHANNELS
     audio_format: int = FORMAT
 
-    _stop_event: threading.Event = field(default_factory=threading.Event, init=False)
-    _accept_thread: threading.Thread | None = field(default=None, init=False)
-    _server_sock: socket.socket | None = field(default=None, init=False)
-    _client_threads: list[threading.Thread] = field(default_factory=list, init=False)
-    _client_conns: set[socket.socket] = field(default_factory=set, init=False)
-    _lock: threading.Lock = field(default_factory=threading.Lock, init=False)
+    _stop_event: threading.Event = field(
+        default_factory=threading.Event,
+        init=False,
+    )
+    _accept_thread: threading.Thread | None = field(
+        default=None,
+        init=False,
+    )
+    _server_sock: socket.socket | None = field(
+        default=None,
+        init=False,
+    )
+    _client_threads: list[threading.Thread] = field(
+        default_factory=list,
+        init=False,
+    )
+    _client_conns: set[socket.socket] = field(
+        default_factory=set,
+        init=False,
+    )
+    _lock: threading.Lock = field(
+        default_factory=threading.Lock,
+        init=False,
+    )
 
     def start(self) -> None:
         if self._accept_thread and self._accept_thread.is_alive():
